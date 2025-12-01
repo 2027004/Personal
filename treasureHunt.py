@@ -38,11 +38,11 @@ def search(living):
 
 def check_index(guessRow,guessCol,living):
     if(unsearched_map[guessRow][guessCol] == " "):
-        print("good to go")
+        pass
     else:
         print("already guessed")
         return
-    print(map[guessRow][guessCol])
+    #print(map[guessRow][guessCol])
     if(map[guessRow][guessCol] == "trap"):
         print("BOOM! You hit a trap and died.")
         print(alive)
@@ -62,7 +62,7 @@ def check_index(guessRow,guessCol,living):
     return 
 
 create_map(map)
-print(map)
+#print(map)
 while(alive == True and found_treasure ==False):
     search(alive)
     print(unsearched_map[0])
